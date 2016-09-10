@@ -1047,9 +1047,11 @@ if(BUILD_CURL_EXE)
 endif()
 
 include(CTest)
-if(BUILD_TESTING)
-  add_subdirectory(tests)
-endif()
+
+# SNICHOLS: disable testing builds
+#if(BUILD_TESTING)
+#  add_subdirectory(tests)
+#endif()
 
 # TODO support GNUTLS, NSS, POLARSSL, AXTLS, CYASSL, WINSSL, DARWINSSL
 if(USE_OPENSSL)
